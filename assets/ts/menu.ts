@@ -78,6 +78,10 @@ export default function () {
             document.body.classList.toggle('show-menu');
             slideToggle(document.getElementById('main-menu'), 300);
             toggleMenu.classList.toggle('is-active');
+            if (document.getElementById('control-menu').classList.contains('transiting')) return;
+            document.body.classList.toggle('show-menu');
+            slideToggle(document.getElementById('control-menu'), 300);
+            toggleMenu.classList.toggle('is-active');
         });
     }
 }

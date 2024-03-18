@@ -2,3 +2,5 @@ public
 resources
 assets/jsconfig.json
 .hugo_build.lock
+.nova
+.DS_store

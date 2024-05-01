@@ -2,6 +2,24 @@
 {{- $context := .Context -}}
 {{- with (index .Context.Site.Params.widgets $scope) -}}
     <aside class="sidebar right-sidebar sticky">
+        <div class="resources">
+            {{ range $resource := $context.Params.resources }}
+                <div class="resource">
+                    <a href="{{ $resource.website }}" target="_blank" rel="noopener">
+                        {{ with $resource.image }}
+                            <div class="resource-image">
+                                <img src="{{ . }}" loading="lazy">
+                            </div>
+                        {{ end }}
+                        <div class="resource-details">
+                            <h2 class="resource-title">
+                                {{- $resource.title -}}
+                            </h2>
+                        </div>
+                    </a>
+                </div>
+            {{ end }}
+        </div>
         {{ range $widget := . }}
             {{ if templates.Exists (printf "partials/widget/%s.html" .type) }}
                 <!-- Ensure that the `params` is not nil -->

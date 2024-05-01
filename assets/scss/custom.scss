@@ -1,1 +1,33 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+
+.resources {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.resource {
+	background-color: var(--card-background);
+	border-radius: 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+.resource a {
+	display: flex;
+	flex-direction: row;
+}
+
+.resource a div {	
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.resource a h2 {
+	font-size: 20px;
+	margin: 0 0 0 20px;
+}	
+
+.resource img {
+	height: 50px;
+	width: 50px;
+}
